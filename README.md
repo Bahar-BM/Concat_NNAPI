@@ -36,7 +36,7 @@ We have implemented a small tool to feed an input to our sample INT8 tflite mode
 * CMake 3.18 or later
 
 ### BUILD INSTRUCTIONS ###
-* Unzip the `tensorflow_lite_cpp_2_9_1_nightly.zip` file inside the `tflite_inference_tool` folder.
+* Unzip the `tensorflow_lite_cpp_2_9_1_static.zip` file inside the `tflite_inference_tool` folder.
 * In a terminal, from `tflite_inference_tool` folder:
 ```console
 $ mkdir build
@@ -49,13 +49,13 @@ $ cmake -G "Unix Makefiles"
         -DCMAKE_VERBOSE_MAKEFILE=ON 
         -DCMAKE_TOOLCHAIN_FILE=<path-to-ndk>/build/cmake/android.toolchain.cmake 
         -DCMAKE_BUILD_TYPE=Release
-        -DTensorFlowLite_ROOT=../tensorflow_lite_cpp_2_9_1_nightly ..
+        -DTensorFlowLite_ROOT=../tensorflow_lite_cpp_2_9_1_static ..
 $ make
 ```
 * Here, you must replace <path-to-ndk> with the absolute path of the ndk installed on your computer. If you installed NDK through Android studio, it is typically located at:
     `/home/<username>/Android/Sdk/ndk/<version>/` on Linux
 
-* `tensorflow_lite_cpp_2_9_1_nightly` is TensorflowFlow Lite library (nightly version) package.
+* `tensorflow_lite_cpp_2_9_1_static` is TensorflowFlow Lite library package.
 ### Run INSTRUCTIONS ###
 WARNING: This step will write to your `/data/local/tmp` folder on device. Please make sure existing files in that folder are backed up as needed.
 
